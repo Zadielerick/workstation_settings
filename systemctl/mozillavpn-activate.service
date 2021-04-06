@@ -1,0 +1,12 @@
+[Unit]
+Description=Activate Mozilla VPN systemd service.
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mozillavpn activate
+ExecStop=/usr/bin/mozillavpn deactivate
+RemainAfterExit=yes
+User=erick
+
+[Install]
+WantedBy=multi-user.target

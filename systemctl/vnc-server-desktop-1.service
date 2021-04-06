@@ -1,0 +1,11 @@
+[Unit]
+Description=VNC Server startup systemd service.
+
+[Service]
+Type=forking
+ExecStart=/home/erick/scripts/start_vncserver.sh
+ExecStop=/home/erick/scripts/stop_vncserver.sh
+User=erick
+
+[Install]
+WantedBy=multi-user.target
